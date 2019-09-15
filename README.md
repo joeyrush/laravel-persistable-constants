@@ -44,12 +44,12 @@ Status::persistConstants();
 ```
 
 | id        | name          | created_at       | updated_at       |
-| --------- |:-------------:| --------------- :| --------------- :|
+| --------- | ------------- | ---------------- | ---------------- |
 | 1         | inactive      | 2019-01-01 00:00 | 2019-01-01 00:00 |
 | 2         | draft         | 2019-01-01 00:00 | 2019-01-01 00:00 |
 | 3         | published     | 2019-01-01 00:00 | 2019-01-01 00:00 |
 
-The package assumes the following columns `id`, `name`, `created_at` and `updated_at`, however you are free to change how the constants are stored by overriding the following method:
+The package assumes the following columns: `id`, `name`, `created_at` and `updated_at`, however you are free to change how the constants are stored by overriding the following method:
 
 ```php
 public function formatConstantsForDB(array $constants): array
