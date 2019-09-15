@@ -24,10 +24,25 @@ trait PersistsConstants
         return collect($constants)->map(function ($id, $key) {
             return [
                 'id' => $id,
-                'name' => strtolower($key),
+                'name' => $this->transform($key),
                 'created_at' => now()->format('Y-m-d H:i:s'),
                 'updated_at' => now()->format('Y-m-d H:i:s')
             ];
         })->toArray();
+    }
+
+    public function find($value)
+    {
+        $reflectedClass = new \ReflectionClass(__CLASS__);
+        $constants = $reflectedClass->getConstants();
+
+        $flipped = array_flip($constants);
+
+        return isset($flipped[$value]) ? $this->transform($flipped[$value]) : null;
+    }
+
+    public function transform($constant)
+    {
+        return strtolower($constant);
     }
 }
