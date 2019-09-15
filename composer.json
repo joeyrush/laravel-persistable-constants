@@ -1,0 +1,11 @@
+{
+    "name": "joeyrush/laravel-persistable-constants",
+    "description": "Persist class constants to a database table in laravel",
+    "authors": [
+        {
+            "name": "Joe Rushton",
+            "email": "joe_rushton@hotmail.co.uk"
+        }
+    ],
+    "require": {}
+}
