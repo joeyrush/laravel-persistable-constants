@@ -7,5 +7,10 @@
             "email": "joe_rushton@hotmail.co.uk"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "JoeyRush\\PersistableConstants\\": "src"
+        }
+    }
 }
